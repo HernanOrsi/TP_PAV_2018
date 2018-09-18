@@ -72,11 +72,31 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Datos\DatosHelados.vb" />
+    <Compile Include="Datos\DatosProveedores.vb" />
+    <Compile Include="frmMenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmMenuPrincipal.Designer.vb">
+      <DependentUpon>frmMenuPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helados\frmAbmHeladoConProv.Designer.vb">
+      <DependentUpon>frmAbmHeladoConProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helados\frmAbmHeladoConProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helados\frmAbmHeladosSimples.Designer.vb">
+      <DependentUpon>frmAbmHeladosSimples.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helados\frmAbmHeladosSimples.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helados\frmBuscarHeladoSimple.Designer.vb">
+      <DependentUpon>frmBuscarHeladoSimple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helados\frmBuscarHeladoSimple.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,6 +116,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helados\frmAbmHeladoConProv.resx">
+      <DependentUpon>frmAbmHeladoConProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helados\frmAbmHeladosSimples.resx">
+      <DependentUpon>frmAbmHeladosSimples.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helados\frmBuscarHeladoSimple.resx">
+      <DependentUpon>frmBuscarHeladoSimple.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -114,6 +146,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Proveedores\" />
+    <Folder Include="Sabores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
